@@ -12,13 +12,13 @@
 
 /* Aquí definimos las Custom properties */
 :root {
-  --body-color: #f1f2f4;
+  --body-color: #fafdff;
   --primary-color: #42a5f5;
   --secondary-color: #22272b;
   --tertiary-color: #657481;
   --quaternary-color: #e9ebec;
-  --background-underline: #333333;
-  --color-underline: #f0f0f0;
+  --first-color: #333333;
+  --second-color: #f0f0f0;
   --font-family: "Poppins", sans-serif;
 }
 
@@ -29,8 +29,8 @@
     --secondary-color: #f1f2f4;
     --tertiary-color: #b8c0c7;
     --quaternary-color: #171f26;
-    --background-underline: #f0f0f0;
-    --color-underline: #333333;
+    --first-color: #f0f0f0;
+    --second-color: #333333;
   }
 }
 /* Opcional */
@@ -129,12 +129,12 @@ q:after {
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
-  background-color: var(--background-underline);
-  color: var(--color-underline);
+  background-color: var(--first-color);
+  color: var(--second-color);
 }
 ::selection {
-  background-color: var(--background-underline);
-  color: var(--color-underline);
+  background-color: var(--first-color);
+  color: var(--second-color);
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
