@@ -9,6 +9,15 @@ Este es mi portafolio web personal creado utilizando HTML, CSS, JavaScript y Vit
 - Mobile First
 - LocalStorage
 - JavaScript Vanilla
+- Scroll Reveal
+
+## Enlace de la pagina web
+
+[Portafolio Web](https://portafolio-web-delta-nine.vercel.app/)
+
+## Vista previa
+
+![](https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/o0j2ftd9nnbrfnbzhxrd)
 
 ## Autor
 
