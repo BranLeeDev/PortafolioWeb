@@ -1,3 +1,5 @@
+import scrollReveal from "scrollreveal";
+
 const filterButtons = document.querySelectorAll(".filters__button");
 const dataContent = document.querySelectorAll("[data-content]");
 const mainSections = document.querySelectorAll(".main__section");
@@ -75,6 +77,24 @@ function main() {
       }
     });
   }
+
+  const sr = scrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2500,
+    delay: 400,
+  });
+
+  sr.reveal(".profile__container-img");
+  sr.reveal(".profile__name", { delay: 500 });
+  sr.reveal(".profile__profession", { delay: 600 });
+  sr.reveal(".profile__socials", { delay: 700 });
+  sr.reveal(".profile__section--info", { delay: 800 });
+  sr.reveal(".profile__section--buttons", { delay: 900 });
+  sr.reveal(".main__section--filters", { delay: 1000 });
+  sr.reveal(".main__section--active", { delay: 1100 });
+  sr.reveal(".footer", { delay: 1200 });
+
   changeThemeMode();
   filterContentSection();
 }
