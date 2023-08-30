@@ -5,7 +5,7 @@ const dataContent = document.querySelectorAll("[data-content]");
 const mainSections = document.querySelectorAll(".main__section");
 const darkIcon = document.querySelector(".profile__dark-icon");
 const body = document.querySelector("body");
-const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+let isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 // Function to handle filtering content sections
 function filterContentSection() {
@@ -35,30 +35,52 @@ function changeThemeMode() {
     const isMoon = darkIcon.classList.contains("fa-moon");
 
     if (isMoon) {
+      body.classList.remove("light");
       body.classList.add("dark");
       darkIcon.classList.remove("fa-moon");
       darkIcon.classList.add("fa-sun");
       window.localStorage.setItem("theme", "dark");
     } else {
       body.classList.remove("dark");
+      body.classList.add("light");
       darkIcon.classList.add("fa-moon");
       darkIcon.classList.remove("fa-sun");
-      window.localStorage.removeItem("theme");
+      window.localStorage.setItem("theme", "light");
     }
   });
 }
 
 // Main function to initialize the page
 function main() {
-  if (isDark) {
-    darkIcon.classList.remove("fa-moon", "fa-sun");
-  }
-
   // Set dark mode based on local storage
-  if (window.localStorage.getItem("theme")) {
+  if (window.localStorage.getItem("theme") === "dark") {
+    body.classList.remove("light");
     body.classList.add("dark");
     darkIcon.classList.remove("fa-moon");
     darkIcon.classList.add("fa-sun");
+    isDark = true;
+  }
+
+  if (window.localStorage.getItem("theme") === "light") {
+    body.classList.remove("dark");
+    body.classList.add("light");
+    darkIcon.classList.remove("fa-mon");
+    darkIcon.classList.add("fa-sun");
+    isDark = false;
+  }
+
+  if (isDark) {
+    body.classList.remove("light");
+    body.classList.add("dark");
+    darkIcon.classList.remove("fa-moon");
+    darkIcon.classList.add("fa-sun");
+    window.localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.remove("dark");
+    body.classList.add("light");
+    darkIcon.classList.remove("fa-sun");
+    darkIcon.classList.add("fa-moon");
+    window.localStorage.setItem("theme", "light");
   }
 
   if (window.localStorage.getItem("clickButton")) {

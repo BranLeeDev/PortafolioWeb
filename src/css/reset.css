@@ -22,17 +22,6 @@
   --font-family: "Poppins", sans-serif;
 }
 
-/* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-color: #0c151d;
-    --secondary-color: #f1f2f4;
-    --tertiary-color: #b8c0c7;
-    --quaternary-color: #171f26;
-    --first-color: #f0f0f0;
-    --second-color: #333333;
-  }
-}
 /* Opcional */
 /* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
 /* Opcional */
@@ -201,4 +190,14 @@ body.dark {
   --quaternary-color: #171f26;
   --first-color: #f0f0f0;
   --second-color: #333333;
+}
+
+body.light {
+  --body-color: #fafdff;
+  --primary-color: #42a5f5;
+  --secondary-color: #22272b;
+  --tertiary-color: #657481;
+  --quaternary-color: #e9ebec;
+  --first-color: #333333;
+  --second-color: #f0f0f0;
 }
