@@ -17,7 +17,7 @@ Este es mi portafolio web personal creado utilizando HTML, CSS, JavaScript y Vit
 
 ## Vista previa
 
-![](https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/o0j2ftd9nnbrfnbzhxrd)
+![](https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/iqrm5nhm4qn8leetu5om)
 
 ## Autor
 
