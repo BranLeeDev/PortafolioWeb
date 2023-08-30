@@ -16,6 +16,7 @@ body.dark {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2.5em;
   min-width: 20em;
   width: 100%;
 }
@@ -27,7 +28,7 @@ body.dark {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5em;
+  gap: 2.5em;
   width: 100%;
   max-width: 70em;
   margin-top: 2em;
@@ -184,9 +185,8 @@ body.dark {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
+  gap: 2.5em;
   width: 100%;
-  margin-top: 2em;
 }
 
 .main__section {
@@ -200,6 +200,29 @@ body.dark {
   flex-direction: column;
   align-items: center;
   gap: 2em;
+  max-width: 41.625em;
+}
+
+.main__skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.skills__title {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+  max-width: 18.125em;
 }
 
 .main__filters {
@@ -330,7 +353,7 @@ body.dark {
   text-align: center;
 }
 
-@media screen and (width >= 500px) {
+@media screen and (width >= 656px) {
   .profile__section--buttons {
     grid-template-rows: 1fr;
     justify-items: flex-end;
@@ -343,5 +366,16 @@ body.dark {
   .profile__contact-buttons {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+  }
+
+  .main__section--skills {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3em;
+  }
+
+  .filters__button {
+    width: 13em;
   }
 }
