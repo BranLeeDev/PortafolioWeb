@@ -213,6 +213,14 @@ body.dark {
   background-color: var(--quaternary-color);
 }
 
+.main [data-content] {
+  display: none;
+}
+
+.main__section--active[data-content] {
+  display: flex;
+}
+
 .filters__button {
   width: 8.5em;
   height: 4em;
@@ -224,6 +232,10 @@ body.dark {
 }
 
 .filters__button:hover {
+  background-color: var(--body-color);
+}
+
+.filters__button--active {
   background-color: var(--body-color);
 }
 

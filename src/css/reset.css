@@ -193,3 +193,12 @@ body {
   /* opcional */
   -moz-osx-font-smoothing: grayscale;
 }
+
+body.dark {
+  --body-color: #0c151d;
+  --secondary-color: #f1f2f4;
+  --tertiary-color: #b8c0c7;
+  --quaternary-color: #171f26;
+  --first-color: #f0f0f0;
+  --second-color: #333333;
+}
