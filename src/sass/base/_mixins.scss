@@ -1,0 +1,53 @@
+@mixin titleSocialsMedia($className) {
+  .#{$className} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 91%;
+    @if $className == "footer" {
+      margin-bottom: 3.75rem;
+    } @else {
+      margin-top: 1.25rem;
+    }
+    @if $className == "footer" {
+      &__p {
+        font-size: 1.5rem;
+      }
+    } @else {
+      &__h1 {
+        font-size: 1.5rem;
+      }
+    }
+    &__ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 55%;
+      max-width: 15.625rem;
+      .li__a {
+        display: inline-block;
+        .a__svg {
+          display: inline-block;
+          height: 1.75rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin backgroundImage($top, $left, $right, $width, $height, $url) {
+  content: "";
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  z-index: -10;
+  display: block;
+  width: $width;
+  height: $height;
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

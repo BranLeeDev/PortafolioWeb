@@ -1,0 +1,40 @@
+@use "base/mixins" as mixins;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 91%;
+  .main__section {
+    display: flex;
+    flex-direction: column;
+  }
+  .main__section--introduction::before {
+    @include mixins.backgroundImage(
+      0,
+      auto,
+      55%,
+      33.125rem,
+      8.0625rem,
+      "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/l9iwfpddjdp5koctwmb2"
+    );
+  }
+  .main__section--introduction {
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.76rem;
+    margin-top: 1.76rem;
+    @import "introduction";
+  }
+
+  .main__section--introduction::after {
+    @include mixins.backgroundImage(
+      7rem,
+      90%,
+      auto,
+      8.0625rem,
+      8.0625rem,
+      "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/zdc4tyehk77tk1zfduxr"
+    );
+  }
+}
