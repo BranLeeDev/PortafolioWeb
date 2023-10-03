@@ -13,9 +13,23 @@
 }
 
 body {
-  background-color: variables.$first-color;
+  background-color: variables.$background-body;
   font-family: "Space Grotesk";
-  color: variables.$fifth-color;
+}
+
+h1,
+h2,
+h3 {
+  color: variables.$title-color;
+}
+
+p {
+  color: variables.$paragraph-color;
+}
+
+a {
+  color: variables.$link-color;
+  text-decoration: none;
 }
 
 img {
@@ -28,7 +42,21 @@ ul {
   list-style: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+input {
+  border: none;
+  background: none;
+  color: variables.$input-color;
+  font-family: inherit;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: variables.$placeholder-color;
+}
+
+input:focus {
+  outline: none;
 }

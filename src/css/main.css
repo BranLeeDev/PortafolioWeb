@@ -13,7 +13,21 @@
 body {
   background-color: #151515;
   font-family: "Space Grotesk";
+}
+
+h1,
+h2,
+h3 {
   color: #ffffff;
+}
+
+p {
+  color: #d9d9d9;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 img {
@@ -26,7 +40,37 @@ ul {
   list-style: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+input {
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+input::-webkit-input-placeholder {
+  color: #919191;
+}
+
+input::-moz-placeholder {
+  color: #919191;
+}
+
+input:-ms-input-placeholder {
+  color: #919191;
+}
+
+input::-ms-input-placeholder {
+  color: #919191;
+}
+
+input::placeholder {
+  color: #919191;
+}
+
+input:focus {
+  outline: none;
 }
