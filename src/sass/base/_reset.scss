@@ -1,0 +1,34 @@
+@use "variables" as variables;
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/src/assets/fonts/space-grotesk/SpaceGrotesk-Medium.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: variables.$first-color;
+  font-family: "Space Grotesk";
+  color: variables.$fifth-color;
+}
+
+img {
+  width: inherit;
+  height: inherit;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

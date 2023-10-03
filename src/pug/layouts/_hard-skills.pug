@@ -1,0 +1,29 @@
+//- 0.01 to 0.12 represents the months.
+//- The integer represents years.
+- const skillOne = {name: "html", experience: 1}
+- const skillTwo =  {name: "css", experience: 1}
+- const skillThree =  {name: "Javascript", experience: 1}
+- const skillFour = {name: "react", experience: 1}
+- const skillFive = {name: "accessibility", experience: 0.01}
+- const skillSix = {name: "node", experience: 0.04}
+
+- const hardSkills = [skillOne, skillTwo, skillThree, skillFour, skillFive, skillSix]
+
+
+section.main__section.main__section--hard-skills   
+  h2.section__h2 Hard Skills
+  ul.section__ul 
+    each skill in hardSkills 
+      li.ul__li  
+        article.li__article 
+          h3.article__h3= skill.name 
+          if skill.experience <= 0.12
+            if (skill.experience === 0.01)
+              p.article__p #{skill.experience * 100} Month of experience
+            else 
+              p.article__p #{skill.experience * 100} Months of experience
+          else
+            if (skill.experience === 1) 
+              p.article__p #{skill.experience} Year of experience
+            else 
+              p.article__p #{skill.experience} Years of experience

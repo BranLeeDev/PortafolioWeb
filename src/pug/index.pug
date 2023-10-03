@@ -1,0 +1,18 @@
+
+doctype html
+html(lang="es")
+  include layouts/_head.pug
+  body 
+    //- Import mixin navBar
+    include components/_navbar.pug 
+
+    div.content-layout 
+      header.header 
+        +titleSocialsMedia("header")
+      main.main
+        include layouts/_introduction.pug
+        include layouts/_hard-skills.pug
+        include layouts/_projects.pug
+        include layouts/_form.pug
+      footer.footer 
+        +titleSocialsMedia("footer")

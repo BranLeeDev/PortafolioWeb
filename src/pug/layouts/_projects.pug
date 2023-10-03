@@ -1,0 +1,28 @@
+- const projectOne = {title: "body mass index calculator", website: "https://bmi-calculator-ochre-phi.vercel.app/", code: "https://github.com/BranLeeDev/BmiCalculator", image: {url: "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/lcwrh5rjntyxxxejfpsj", alt: "BMI Calculator"}, stack: ["html", "tailwind", "javascript"]}
+- const projectTwo = {title: "video game tic tac toe", website: "https://tic-tac-toe-snowy-xi.vercel.app/", code: "https://github.com/BranLeeDev/TicTacToe", image: {url: "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/nx1kha9ff4xxk19gyyfw", alt: "Tic Tac Toe"}, stack: ["react", "typescript", "tailwind"]}
+- const projectThree = {title: "pod request access landing page", website: "https://pod-azure.vercel.app/", code: "https://github.com/BranLeeDev/Pod", image: {url: "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/u9alnzyonslyt2zrugxr", alt: "POD"}, stack: ["html", "sass", "js"]}
+- const projectFour =  {title: "meet landing page", website: "https://meet-inky-seven.vercel.app/", code:"https://github.com/BranLeeDev/Meet", image: {url: "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/rtaaqyvx097hnsdxecvo", alt: "Meet"}, stack: ["html", "css"]}
+- const projectFive = {title: "equalizer landing page", website: "https://equalizer-m6ww.vercel.app/", code:"https://github.com/BranLeeDev/Equalizer", image: {url: "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/twbs7huqskayn6zuazik", alt: "Equalizer"}, stack: ["html", "tailwind"]}
+- const projectSix =    {title: "e-learning landing page", website: "https://skilled-lake.vercel.app/", code:"https://github.com/BranLeeDev/Skilled", image: {url: "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/yazkqz2twsbd7kubrlhq", alt: "Skilled"}, stack: ["html", "sass"]}
+
+- const dataProjects = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix]
+
+
+section.main__section.main__section--projects 
+  h2.section__h2 Projects 
+  ul.section__ul 
+    each project in dataProjects 
+      li.ul__li 
+        article.ul__article  
+          figure.article__figure 
+            img(src=project.image.url, alt="Image preview of the " + project.image.alt + " project").figure__img
+          h3.article__h3=project.title
+          ul.article__ul.article__ul--stack
+            each tech in project.stack
+              li.ul__li 
+                p.li__p=tech
+          ul.article__ul.article__ul--view 
+            li.ul__li 
+              a(href=project.website, target="_blank").li__a VIEW PROJECT
+            li 
+              a(href=project.code, target="_blank").li__a VIEW CODE
