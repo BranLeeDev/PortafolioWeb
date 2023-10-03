@@ -1,22 +1,21 @@
+@use "variables" as variables;
+
 @mixin titleSocialsMedia($className) {
   .#{$className} {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    gap: variables.$size-gap-mobile;
     width: 91%;
     @if $className == "footer" {
-      margin-bottom: 3.75rem;
-    } @else {
-      margin-top: 1.25rem;
-    }
-    @if $className == "footer" {
+      margin-bottom: variables.$size-margin-mobile * 3;
       &__p {
-        font-size: 1.5rem;
+        font-size: variables.$size-logo-mobile;
       }
     } @else {
+      margin-top: variables.$size-margin-mobile;
       &__h1 {
-        font-size: 1.5rem;
+        font-size: variables.$size-logo-mobile;
       }
     }
     &__ul {
@@ -25,21 +24,44 @@
       align-items: center;
       width: 55%;
       max-width: 15.625rem;
-      .li__a {
-        display: inline-block;
-        .a__svg {
-          display: inline-block;
-          height: 1.75rem;
+      .ul__li {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .li__a {
+    display: inline-flex;
+    .a__svg {
+      display: inline-block;
+      width: 1.5625rem;
+      height: 1.5625rem;
+    }
+  }
+
+  @media screen and (width >= variables.$breakpoint-mobile) {
+    .#{$className} {
+      gap: 1.25rem;
+      @if $className == "footer" {
+        margin-bottom: (variables.$size-margin-mobile + 0.625) * 3;
+        &__p {
+          font-size: variables.$size-logo-mobile + 0.25rem;
+        }
+      } @else {
+        margin-top: variables.$size-margin-mobile + 0.625rem;
+        &__h1 {
+          font-size: variables.$size-logo-mobile + 0.25rem;
         }
       }
     }
   }
 }
 
-@mixin backgroundImage($top, $left, $right, $width, $height, $url) {
+@mixin backgroundImage($top, $bottom, $left, $right, $width, $height, $url) {
   content: "";
   position: absolute;
   top: $top;
+  bottom: $bottom;
   left: $left;
   right: $right;
   z-index: -10;

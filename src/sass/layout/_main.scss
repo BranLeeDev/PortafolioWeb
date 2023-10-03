@@ -1,4 +1,5 @@
 @use "base/mixins" as mixins;
+@use "base/variables" as variables;
 
 .main {
   display: flex;
@@ -12,6 +13,7 @@
     @include mixins.backgroundImage(
       0,
       auto,
+      auto,
       55%,
       33.125rem,
       8.0625rem,
@@ -22,19 +24,103 @@
     position: relative;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 1.76rem;
-    margin-top: 1.76rem;
+    gap: (variables.$size-gap-mobile + 0.5rem) * 2;
+    margin-top: (variables.$size-margin-mobile + 0.4375rem) * 3;
+    margin-bottom: variables.$size-margin-mobile * 5;
     @import "introduction";
   }
 
   .main__section--introduction::after {
     @include mixins.backgroundImage(
-      7rem,
+      7.1rem,
+      auto,
       90%,
       auto,
       8.0625rem,
       8.0625rem,
       "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/zdc4tyehk77tk1zfduxr"
     );
+  }
+
+  .main__section--hard-skills::before {
+    content: "";
+    width: 100%;
+    height: 0.0625rem;
+    margin-bottom: variables.$size-margin-mobile * 3;
+    background-color: variables.$line-color;
+  }
+
+  .main__section--hard-skills {
+    align-items: center;
+    .section__h2 {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    .section__ul {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: variables.$size-gap-mobile + 0.5rem;
+      @import "hard-skills";
+    }
+    .section__ul::after {
+      @include mixins.backgroundImage(
+        auto,
+        -5.9rem,
+        60%,
+        auto,
+        33.125rem,
+        8.0625rem,
+        "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/l9iwfpddjdp5koctwmb2"
+      );
+    }
+  }
+
+  .main__section--hard-skills::after {
+    content: "";
+    width: 100%;
+    height: 0.0625rem;
+    margin-top: variables.$size-margin-mobile * 3;
+    background-color: variables.$line-color;
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile) {
+  .main {
+    .main__section--introduction::before {
+      top: 1rem;
+    }
+    .main__section--introduction {
+      gap: (variables.$size-gap-mobile + 0.8125rem) * 2;
+      margin-top: (variables.$size-margin-mobile + 0.4375rem) * 4;
+      margin-bottom: variables.$size-margin-mobile * 8;
+    }
+    .main__section--introduction::after {
+      top: 10.7rem;
+    }
+
+    .main__section--hard-skills::before {
+      margin-bottom: variables.$size-margin-mobile * 4;
+    }
+
+    .main__section--hard-skills {
+      .section__ul {
+        gap: variables.$size-gap-mobile + 0.875rem;
+      }
+      .section__ul::after {
+        bottom: -6.5rem;
+      }
+    }
+
+    .main__section--hard-skills::after {
+      margin-top: variables.$size-margin-mobile * 4;
+    }
   }
 }
