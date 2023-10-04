@@ -594,6 +594,8 @@ input:focus {
   text-align: center;
 }
 .main .main__section--contact .section__div .div__form {
+  position: relative;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,6 +651,22 @@ input:focus {
       align-self: flex-end;
   border-bottom: 0.0625rem solid #4ee1a0;
 }
+.main .main__section--contact .section__div .div__form::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: -0.5rem;
+  left: auto;
+  right: 50%;
+  z-index: -10;
+  display: block;
+  width: 33.125rem;
+  height: 8.0625rem;
+  background-image: url("https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/l9iwfpddjdp5koctwmb2");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 @media screen and (width >= 360px) {
   .main .main__section--contact .section__div .div__h2 {
     font-size: 2.11rem;
@@ -698,6 +716,9 @@ input:focus {
     font-size: 1.01rem;
     line-height: 1.635rem;
     letter-spacing: 0.175rem;
+  }
+  .main .main__section--contact .section__div .div__form::after {
+    bottom: 1rem;
   }
 }
 

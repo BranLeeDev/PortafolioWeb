@@ -1,3 +1,6 @@
+@use "base/mixins" as mixins;
+@use "base/variables" as variables;
+
 .div__h2 {
   display: inline;
   font-size: variables.$size-title-mobile;
@@ -13,6 +16,8 @@
 }
 
 .div__form {
+  position: relative;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   gap: variables.$size-gap-mobile * 3;
@@ -50,6 +55,18 @@
     align-self: flex-end;
     border-bottom: 0.0625rem solid variables.$underline-color;
   }
+}
+
+.div__form::after {
+  @include mixins.backgroundImage(
+    auto,
+    -0.5rem,
+    auto,
+    50%,
+    33.125rem,
+    8.0625rem,
+    "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/l9iwfpddjdp5koctwmb2"
+  );
 }
 
 @media screen and (width >= variables.$breakpoint-mobile) {
@@ -91,5 +108,8 @@
       line-height: variables.$size-paragraph-mobile + 0.625rem + 0.25rem; // 0.625rem + 0.625rem + 0.25rem = 1.635rem
       letter-spacing: 0.175rem;
     }
+  }
+  .div__form::after {
+    bottom: 1rem;
   }
 }
