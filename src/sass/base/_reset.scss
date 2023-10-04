@@ -42,6 +42,19 @@ ul {
   list-style: none;
 }
 
+textarea {
+  background: none;
+  border: none;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  color: variables.$input-color;
+}
+
+textarea::placeholder {
+  color: variables.$placeholder-color;
+}
+
 input {
   border: none;
   background: none;

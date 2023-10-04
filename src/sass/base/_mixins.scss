@@ -8,7 +8,7 @@
     gap: variables.$size-gap-mobile;
     width: 91%;
     @if $className == "footer" {
-      margin-bottom: variables.$size-margin-mobile * 3;
+      padding-bottom: variables.$size-margin-mobile * 4;
       &__p {
         font-size: variables.$size-logo-mobile;
       }
@@ -43,7 +43,7 @@
     .#{$className} {
       gap: 1.25rem;
       @if $className == "footer" {
-        margin-bottom: (variables.$size-margin-mobile + 0.625) * 3;
+        padding-bottom: (variables.$size-margin-mobile + 0.625) * 5;
         &__p {
           font-size: variables.$size-logo-mobile + 0.25rem;
         }

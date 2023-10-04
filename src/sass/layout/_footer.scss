@@ -1,3 +1,18 @@
+@use "base/variables" as variables;
 @use "base/mixins" as mixins;
 
 @include mixins.titleSocialsMedia("footer");
+
+.footer {
+  width: 100%;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: variables.$background-footer;
+}
+
+@media screen and (width >= variables.$breakpoint-mobile) {
+  .footer {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+}

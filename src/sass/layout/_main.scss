@@ -5,8 +5,10 @@
   display: flex;
   flex-direction: column;
   gap: variables.$size-gap-mobile * 7;
-  width: 91%;
+  align-items: center;
+  width: 100%;
   .main__section {
+    width: 91%;
     display: flex;
     flex-direction: column;
   }
@@ -95,6 +97,23 @@
     gap: variables.$size-gap-mobile * 3;
     @import "projects";
   }
+
+  .main__section--contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: variables.$background-footer;
+    .section__div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: variables.$size-gap-mobile + 0.5rem;
+      width: 91%;
+      margin-top: 2.5rem;
+      @import "contact";
+    }
+  }
 }
 
 @media screen and (width >= variables.$breakpoint-mobile) {
@@ -130,6 +149,13 @@
 
     .main__section--projects {
       gap: variables.$size-gap-mobile * 4;
+    }
+
+    .main__section--contact {
+      .section__div {
+        gap: variables.$size-gap-mobile * 2;
+        margin-top: 3.75rem;
+      }
     }
   }
 }
