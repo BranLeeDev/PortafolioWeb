@@ -4,6 +4,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  gap: variables.$size-gap-mobile * 7;
   width: 91%;
   .main__section {
     display: flex;
@@ -25,8 +26,7 @@
     flex-direction: column-reverse;
     align-items: center;
     gap: (variables.$size-gap-mobile + 0.5rem) * 2;
-    margin-top: (variables.$size-margin-mobile + 0.4375rem) * 3;
-    margin-bottom: variables.$size-margin-mobile * 5;
+    margin-top: (variables.$size-margin-mobile + 0.4375rem) * 4;
     @import "introduction";
   }
 
@@ -90,17 +90,22 @@
     margin-top: variables.$size-margin-mobile * 3;
     background-color: variables.$line-color;
   }
+
+  .main__section--projects {
+    gap: variables.$size-gap-mobile * 3;
+    @import "projects";
+  }
 }
 
 @media screen and (width >= variables.$breakpoint-mobile) {
   .main {
+    gap: variables.$size-gap-mobile * 8;
     .main__section--introduction::before {
       top: 1rem;
     }
     .main__section--introduction {
       gap: (variables.$size-gap-mobile + 0.8125rem) * 2;
-      margin-top: (variables.$size-margin-mobile + 0.4375rem) * 4;
-      margin-bottom: variables.$size-margin-mobile * 8;
+      margin-top: (variables.$size-margin-mobile + 0.4375rem) * 5;
     }
     .main__section--introduction::after {
       top: 10.7rem;
@@ -121,6 +126,10 @@
 
     .main__section--hard-skills::after {
       margin-top: variables.$size-margin-mobile * 4;
+    }
+
+    .main__section--projects {
+      gap: variables.$size-gap-mobile * 4;
     }
   }
 }

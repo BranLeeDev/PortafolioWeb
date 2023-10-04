@@ -1,0 +1,98 @@
+@use "base/variables" as variables;
+
+.section__div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .div__h2 {
+    font-size: variables.$size-title-mobile; // = 1.87rem
+    font-weight: 700;
+    line-height: variables.$size-title-mobile; // = 1.87rem
+  }
+  .div__a {
+    padding-bottom: 0.3125rem;
+    border-bottom: 0.0625rem solid variables.$underline-color;
+    font-size: variables.$size-paragraph-mobile; // 0.76rem
+    font-weight: 700;
+    letter-spacing: 0.1429rem;
+    text-transform: uppercase;
+  }
+}
+
+.section__ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: variables.$size-gap-mobile * 3;
+  .ul__li {
+    display: grid;
+  }
+}
+
+.ul__article {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
+  row-gap: variables.$size-gap-mobile / 2;
+  .article__h3 {
+    margin-top: variables.$size-gap-mobile / 2;
+    text-transform: uppercase;
+    font-size: variables.$size-subtitle-mobile;
+  }
+  .article__ul {
+    display: flex;
+  }
+  .article__ul--stack {
+    gap: variables.$size-gap-mobile + 0.25rem;
+    .li__p {
+      font-size: variables.$size-paragraph-mobile + 0.125rem;
+    }
+  }
+  .article__ul--view {
+    gap: variables.$size-gap-mobile + 0.5rem;
+    margin-top: variables.$size-gap-mobile / 2;
+    .li__a {
+      padding-bottom: 0.3125rem;
+      border-bottom: 0.0625rem solid variables.$underline-color;
+      font-size: variables.$size-paragraph-mobile; // 0.76rem
+      font-weight: 700;
+      letter-spacing: 0.1429rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile) {
+  .section__div {
+    .div__h2 {
+      font-size: variables.$size-title-mobile + 0.625rem; // = 1.87rem
+    }
+    .div__a {
+      border-bottom: 0.125rem solid variables.$underline-color;
+      font-size: variables.$size-paragraph-mobile + 0.25rem; // 0.625rem + 0.25rem = 1.01rem
+      letter-spacing: 0.175rem;
+    }
+  }
+
+  .ul__article {
+    row-gap: variables.$size-gap-mobile;
+    .article__h3 {
+      margin-top: variables.$size-gap-mobile;
+      font-size: variables.$size-subtitle-mobile + 0.25rem;
+    }
+
+    .article__ul--stack {
+      gap: variables.$size-gap-mobile + 0.5rem;
+      .li__p {
+        font-size: variables.$size-paragraph-mobile + 0.375rem;
+      }
+    }
+    .article__ul--view {
+      gap: variables.$size-gap-mobile + 1.5rem;
+      margin-top: variables.$size-gap-mobile / 2;
+      .li__a {
+        border-bottom: 0.125rem solid variables.$underline-color;
+        font-size: variables.$size-paragraph-mobile + 0.25rem;
+        letter-spacing: 0.175rem;
+      }
+    }
+  }
+}

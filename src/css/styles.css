@@ -160,6 +160,7 @@ input:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 4.375rem;
   width: 91%;
 }
 .main .main__section {
@@ -197,8 +198,7 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   gap: 2.25rem;
-  margin-top: 3.1875rem;
-  margin-bottom: 3.125rem;
+  margin-top: 4.25rem;
 }
 .main .main__section--introduction .section__div {
   display: -webkit-box;
@@ -304,7 +304,6 @@ input:focus {
     font-size: 1.01rem;
     line-height: 1.635rem;
     letter-spacing: 0.175rem;
-    text-transform: uppercase;
   }
   .main .main__section--introduction .section__figure {
     height: 18.75rem;
@@ -416,15 +415,121 @@ input:focus {
   margin-top: 1.875rem;
   background-color: #ffffff;
 }
+.main .main__section--projects {
+  gap: 1.875rem;
+}
+.main .main__section--projects .section__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .main__section--projects .section__div .div__h2 {
+  font-size: 1.87rem;
+  font-weight: 700;
+  line-height: 1.87rem;
+}
+.main .main__section--projects .section__div .div__a {
+  padding-bottom: 0.3125rem;
+  border-bottom: 0.0625rem solid #4ee1a0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1429rem;
+  text-transform: uppercase;
+}
+.main .main__section--projects .section__ul {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 1.875rem;
+}
+.main .main__section--projects .section__ul .ul__li {
+  display: -ms-grid;
+  display: grid;
+}
+.main .main__section--projects .ul__article {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(-webkit-min-content, -webkit-max-content));
+  grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
+  row-gap: 0.3125rem;
+}
+.main .main__section--projects .ul__article .article__h3 {
+  margin-top: 0.3125rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.main .main__section--projects .ul__article .article__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main .main__section--projects .ul__article .article__ul--stack {
+  gap: 0.875rem;
+}
+.main .main__section--projects .ul__article .article__ul--stack .li__p {
+  font-size: 0.885rem;
+}
+.main .main__section--projects .ul__article .article__ul--view {
+  gap: 1.125rem;
+  margin-top: 0.3125rem;
+}
+.main .main__section--projects .ul__article .article__ul--view .li__a {
+  padding-bottom: 0.3125rem;
+  border-bottom: 0.0625rem solid #4ee1a0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1429rem;
+  text-transform: uppercase;
+}
+@media screen and (width >= 360px) {
+  .main .main__section--projects .section__div .div__h2 {
+    font-size: 2.495rem;
+  }
+  .main .main__section--projects .section__div .div__a {
+    border-bottom: 0.125rem solid #4ee1a0;
+    font-size: 1.01rem;
+    letter-spacing: 0.175rem;
+  }
+  .main .main__section--projects .ul__article {
+    row-gap: 0.625rem;
+  }
+  .main .main__section--projects .ul__article .article__h3 {
+    margin-top: 0.625rem;
+    font-size: 1.5rem;
+  }
+  .main .main__section--projects .ul__article .article__ul--stack {
+    gap: 1.125rem;
+  }
+  .main .main__section--projects .ul__article .article__ul--stack .li__p {
+    font-size: 1.135rem;
+  }
+  .main .main__section--projects .ul__article .article__ul--view {
+    gap: 2.125rem;
+    margin-top: 0.3125rem;
+  }
+  .main .main__section--projects .ul__article .article__ul--view .li__a {
+    border-bottom: 0.125rem solid #4ee1a0;
+    font-size: 1.01rem;
+    letter-spacing: 0.175rem;
+  }
+}
 
 @media screen and (width >= 360px) {
+  .main {
+    gap: 5rem;
+  }
   .main .main__section--introduction::before {
     top: 1rem;
   }
   .main .main__section--introduction {
     gap: 2.875rem;
-    margin-top: 4.25rem;
-    margin-bottom: 5rem;
+    margin-top: 5.3125rem;
   }
   .main .main__section--introduction::after {
     top: 10.7rem;
@@ -440,6 +545,9 @@ input:focus {
   }
   .main .main__section--hard-skills::after {
     margin-top: 2.5rem;
+  }
+  .main .main__section--projects {
+    gap: 2.5rem;
   }
 }
 .footer {
