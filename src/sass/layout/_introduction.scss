@@ -1,45 +1,27 @@
 @use "base/variables" as variables;
+@use "base/mixins" as mixins;
 
 .section__div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: variables.$size-gap-mobile + 0.5rem; // 0.625rem + 0.5rem = 1.125rem
+  @include mixins.flexCol(1.25rem);
   .div__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: variables.$size-gap-mobile / 2;
+    @include mixins.flexCol(0.125rem);
     .div__h2 {
       display: inline;
-      font-size: variables.$size-title-mobile; // = 1.87rem
-      font-weight: 700;
-      line-height: variables.$size-title-mobile; // = 1.87rem
+      @include mixins.typographyTitles;
     }
     .div__p {
       display: inline;
-      font-size: variables.$size-title-mobile; // = 1.87rem
-      font-weight: 700;
-      color: variables.$title-color;
+      @include mixins.typographyTitles;
       .p__span {
-        border-bottom: 0.125rem solid variables.$underline-color;
+        @include mixins.underlineGreenTitles;
       }
     }
   }
   .div__p {
-    font-size: variables.$size-paragraph-mobile; // =  0.76rem
-    font-weight: 500;
-    line-height: variables.$size-paragraph-mobile + 0.625rem; //  0.76rem + 0.625rem = 1.385rem
-    text-align: center;
+    @include mixins.typographyParagraphs;
   }
   .div__a {
-    padding-bottom: 0.3125rem;
-    border-bottom: 0.0625rem solid variables.$underline-color;
-    font-size: variables.$size-paragraph-mobile; // 0.76rem
-    font-weight: 700;
-    line-height: variables.$size-paragraph-mobile + 0.625rem; // 0.76rem + 0.625rem =  1.385rem
-    letter-spacing: 0.1429rem;
-    text-transform: uppercase;
+    @include mixins.underlineGreenLinks;
   }
 }
 .section__figure {
@@ -65,31 +47,9 @@
 
 @media screen and (width >= variables.$breakpoint-mobile) {
   .section__div {
-    gap: variables.$size-gap-mobile + 0.875rem; //   0.625rem + 0.875 = 1.125rem
-    .div__div {
-      gap: variables.$size-gap-mobile;
-      .div__h2 {
-        font-size: variables.$size-title-mobile + 0.24rem; // 1.87rem + 0.24rem = 2.11rem
-        line-height: variables.$size-title-mobile + 0.24rem; // 1.87rem + 0.24rem = 2.11rem
-      }
-      .div__p {
-        font-size: variables.$size-title-mobile + 0.24rem; // 1.87rem + 0.24rem = 2.11rem
-        .p__span {
-          border-bottom: 0.25rem solid variables.$underline-color;
-        }
-      }
-    }
-    .div__p {
-      font-size: variables.$size-paragraph-mobile + 0.25rem; // 0.625rem + 0.25rem = 1.01rem
-      line-height: variables.$size-paragraph-mobile + 0.625rem + 0.25rem; // 0.625rem + 0.625rem + 0.25rem = 1.635rem
-    }
-    .div__a {
-      border-bottom: 0.125rem solid variables.$underline-color;
-      font-size: variables.$size-paragraph-mobile + 0.25rem; // 0.625rem + 0.25rem = 1.01rem
-      line-height: variables.$size-paragraph-mobile + 0.625rem + 0.25rem; // 0.625rem + 0.625rem + 0.25rem = 1.635rem
-      letter-spacing: 0.175rem;
-    }
+    gap: 1.5rem;
   }
+
   .section__figure {
     height: 18.75rem;
   }

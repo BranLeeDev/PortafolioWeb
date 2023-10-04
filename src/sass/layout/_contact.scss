@@ -2,17 +2,12 @@
 @use "base/variables" as variables;
 
 .div__h2 {
-  display: inline;
-  font-size: variables.$size-title-mobile;
-  font-weight: 700;
-  line-height: variables.$size-title-mobile;
+  @include mixins.typographyTitles;
 }
 
 .div__p {
-  font-size: variables.$size-paragraph-mobile;
-  font-weight: 500;
-  line-height: variables.$size-paragraph-mobile + 0.625rem;
-  text-align: center;
+  @include mixins.typographyParagraphs;
+  margin-top: 1rem;
 }
 
 .div__form {
@@ -20,96 +15,41 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  gap: variables.$size-gap-mobile * 3;
+  gap: 1.25rem;
   width: 100%;
-  margin-top: 2rem;
-  .form__input {
-    font-size: variables.$size-paragraph-mobile;
-    padding-bottom: 0.3125rem;
-    border-bottom: 0.0625rem solid variables.$line-color;
-    font-weight: 500;
-    letter-spacing: 0.1429rem;
-    text-transform: uppercase;
-  }
-  .form__input::placeholder {
-    font-size: variables.$size-paragraph-mobile;
-  }
+  margin-top: 2.5rem;
+  padding-bottom: 4.375rem;
   .form__input--name,
   .form__input--email {
-    padding-left: 1.25rem;
-  }
-  .form__textarea {
-    font-size: variables.$size-paragraph-mobile;
-    padding-bottom: 0.3125rem;
-    border-bottom: 0.0625rem solid variables.$line-color;
-    font-size: variables.$size-paragraph-mobile;
-    line-height: variables.$size-paragraph-mobile + 0.625rem;
-    font-weight: 500;
-    letter-spacing: 0.1429rem;
-    text-transform: uppercase;
-    height: 6.6875rem;
-    padding-left: 1.25rem;
+    @include mixins.typographyInput;
   }
 
+  .form__textarea {
+    @include mixins.typographyInput;
+    height: 9rem;
+  }
   .form__input--submit {
     align-self: flex-end;
-    border-bottom: 0.0625rem solid variables.$underline-color;
+    @include mixins.underlineGreenLinks;
   }
 }
 
 .div__form::after {
-  @include mixins.backgroundImage(
-    auto,
-    -0.5rem,
-    auto,
-    50%,
-    33.125rem,
-    8.0625rem,
-    "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/l9iwfpddjdp5koctwmb2"
-  );
+  @include mixins.imageEllipse;
+  bottom: 4rem;
+  right: 50%;
 }
 
 @media screen and (width >= variables.$breakpoint-mobile) {
-  .div__h2 {
-    font-size: variables.$size-title-mobile + 0.24rem;
-    line-height: variables.$size-title-mobile + 0.24rem;
-  }
-
-  .div__p {
-    font-size: variables.$size-paragraph-mobile + 0.25rem;
-    line-height: variables.$size-paragraph-mobile + 0.625rem + 0.25rem;
-  }
   .div__form {
-    gap: variables.$size-gap-mobile * 4;
-    margin-top: 3rem;
-    .form__input {
-      border-bottom: 0.125rem solid variables.$line-color;
-      font-size: variables.$size-paragraph-mobile + 0.25rem; // 0.625rem + 0.25rem = 1.01rem
-      line-height: variables.$size-paragraph-mobile + 0.625rem + 0.25rem; // 0.625rem + 0.625rem + 0.25rem = 1.635rem
-      letter-spacing: 0.175rem;
-    }
-    .form__input::placeholder {
-      font-size: variables.$size-paragraph-mobile + 0.25rem;
-    }
-    .form__input--name,
-    .form__input--email {
-      padding-left: 1.25rem;
-    }
-    .form__textarea {
-      border-bottom: 0.125rem solid variables.$line-color;
-      font-size: variables.$size-paragraph-mobile + 0.25rem; // 0.625rem + 0.25rem = 1.01rem
-      line-height: variables.$size-paragraph-mobile + 0.625rem + 0.25rem; // 0.625rem + 0.625rem + 0.25rem = 1.635rem
-      letter-spacing: 0.175rem;
-    }
-
-    .form__input--submit {
-      border-bottom: 0.125rem solid variables.$underline-color;
-      font-size: variables.$size-paragraph-mobile + 0.25rem; // 0.625rem + 0.25rem = 1.01rem
-      line-height: variables.$size-paragraph-mobile + 0.625rem + 0.25rem; // 0.625rem + 0.625rem + 0.25rem = 1.635rem
-      letter-spacing: 0.175rem;
-    }
+    gap: 1.5rem;
+    padding-bottom: 5rem;
   }
   .div__form::after {
-    bottom: 1rem;
+    bottom: 5.4rem;
+  }
+
+  .form__textarea {
+    height: 10rem;
   }
 }

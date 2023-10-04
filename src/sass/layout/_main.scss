@@ -2,10 +2,7 @@
 @use "base/variables" as variables;
 
 .main {
-  display: flex;
-  flex-direction: column;
-  gap: variables.$size-gap-mobile * 7;
-  align-items: center;
+  @include mixins.flexCol(0);
   width: 100%;
   .main__section {
     width: 91%;
@@ -13,47 +10,32 @@
     flex-direction: column;
   }
   .main__section--introduction::before {
-    @include mixins.backgroundImage(
-      0,
-      auto,
-      auto,
-      55%,
-      33.125rem,
-      8.0625rem,
-      "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/l9iwfpddjdp5koctwmb2"
-    );
+    @include mixins.imageEllipse;
+    top: 2.5rem;
+    right: 55%;
   }
   .main__section--introduction {
     position: relative;
     flex-direction: column-reverse;
     align-items: center;
-    gap: (variables.$size-gap-mobile + 0.5rem) * 2;
-    margin-top: (variables.$size-margin-mobile + 0.4375rem) * 4;
+    gap: 2rem;
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+    border-bottom: variables.$border-bottom-line;
     @import "introduction";
   }
 
   .main__section--introduction::after {
-    @include mixins.backgroundImage(
-      7.1rem,
-      auto,
-      90%,
-      auto,
-      8.0625rem,
-      8.0625rem,
-      "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/zdc4tyehk77tk1zfduxr"
-    );
-  }
-
-  .main__section--hard-skills::before {
-    content: "";
-    width: 100%;
-    height: 0.0625rem;
-    margin-bottom: variables.$size-margin-mobile * 3;
-    background-color: variables.$line-color;
+    @include mixins.imageCircle;
+    top: 10.6rem;
+    left: 90%;
   }
 
   .main__section--hard-skills {
     align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: variables.$border-bottom-line;
     .section__h2 {
       position: absolute;
       width: 1px;
@@ -69,48 +51,32 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: variables.$size-gap-mobile + 0.5rem;
+      gap: 1.25rem;
       @import "hard-skills";
     }
     .section__ul::after {
-      @include mixins.backgroundImage(
-        auto,
-        -5.9rem,
-        60%,
-        auto,
-        33.125rem,
-        8.0625rem,
-        "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/l9iwfpddjdp5koctwmb2"
-      );
+      @include mixins.imageEllipse;
+      bottom: -6.7rem;
+      left: 60%;
     }
   }
 
-  .main__section--hard-skills::after {
-    content: "";
-    width: 100%;
-    height: 0.0625rem;
-    margin-top: variables.$size-margin-mobile * 3;
-    background-color: variables.$line-color;
-  }
-
   .main__section--projects {
-    gap: variables.$size-gap-mobile * 3;
+    gap: 2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
     @import "projects";
   }
 
   .main__section--contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mixins.flexCol(0);
     width: 100%;
+    padding-top: 3.125rem;
     background-color: variables.$background-footer;
     .section__div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: variables.$size-gap-mobile + 0.5rem;
+      @include mixins.flexCol(0);
       width: 91%;
-      margin-top: 2.5rem;
+      border-bottom: variables.$border-bottom-line;
       @import "contact";
     }
   }
@@ -118,44 +84,38 @@
 
 @media screen and (width >= variables.$breakpoint-mobile) {
   .main {
-    gap: variables.$size-gap-mobile * 8;
     .main__section--introduction::before {
-      top: 1rem;
+      top: 4rem;
+      right: 60%;
     }
     .main__section--introduction {
-      gap: (variables.$size-gap-mobile + 0.8125rem) * 2;
-      margin-top: (variables.$size-margin-mobile + 0.4375rem) * 5;
+      gap: 3rem;
+      padding-top: 4.5rem;
+      padding-bottom: 5.5rem;
     }
     .main__section--introduction::after {
-      top: 10.7rem;
-    }
-
-    .main__section--hard-skills::before {
-      margin-bottom: variables.$size-margin-mobile * 4;
+      top: 15.2rem;
     }
 
     .main__section--hard-skills {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
       .section__ul {
-        gap: variables.$size-gap-mobile + 0.875rem;
+        gap: 1.625rem;
       }
       .section__ul::after {
-        bottom: -6.5rem;
+        bottom: -7rem;
       }
-    }
-
-    .main__section--hard-skills::after {
-      margin-top: variables.$size-margin-mobile * 4;
     }
 
     .main__section--projects {
-      gap: variables.$size-gap-mobile * 4;
+      gap: 2.5rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
     }
 
     .main__section--contact {
-      .section__div {
-        gap: variables.$size-gap-mobile * 2;
-        margin-top: 3.75rem;
-      }
+      padding-top: 3.75rem;
     }
   }
 }

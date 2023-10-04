@@ -1,35 +1,21 @@
 @use "variables" as variables;
 
-@mixin titleSocialsMedia($className) {
-  .#{$className} {
+@mixin titleSocialsMedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 91%;
+  .div__ul {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: variables.$size-gap-mobile;
-    width: 91%;
-    @if $className == "footer" {
-      padding-bottom: variables.$size-margin-mobile * 4;
-      &__p {
-        font-size: variables.$size-logo-mobile;
-      }
-    } @else {
-      margin-top: variables.$size-margin-mobile;
-      &__h1 {
-        font-size: variables.$size-logo-mobile;
-      }
-    }
-    &__ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 55%;
-      max-width: 15.625rem;
-      .ul__li {
-        display: inline-flex;
-      }
+    width: 55%;
+    max-width: 15.625rem;
+    .ul__li {
+      display: inline-flex;
     }
   }
-
   .li__a {
     display: inline-flex;
     .a__svg {
@@ -40,21 +26,15 @@
   }
 
   @media screen and (width >= variables.$breakpoint-mobile) {
-    .#{$className} {
-      gap: 1.25rem;
-      @if $className == "footer" {
-        padding-bottom: (variables.$size-margin-mobile + 0.625) * 5;
-        &__p {
-          font-size: variables.$size-logo-mobile + 0.25rem;
-        }
-      } @else {
-        margin-top: variables.$size-margin-mobile + 0.625rem;
-        &__h1 {
-          font-size: variables.$size-logo-mobile + 0.25rem;
-        }
-      }
-    }
+    gap: 1.25rem;
   }
+}
+
+@mixin flexCol($gap) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
 }
 
 @mixin backgroundImage($top, $bottom, $left, $right, $width, $height, $url) {
@@ -72,4 +52,112 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@mixin imageEllipse {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  display: inline-block;
+  width: 33.125rem;
+  height: 8.0625rem;
+  background-image: url("https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/l9iwfpddjdp5koctwmb2");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin imageCircle {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  display: inline-block;
+  width: 8.0625rem;
+  height: 8.0625rem;
+  background-image: url("https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/zdc4tyehk77tk1zfduxr");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin typographyTitles {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+
+  @media screen and (width >= variables.$breakpoint-mobile) {
+    font-size: 2.1rem;
+    line-height: 2.1rem;
+  }
+
+  @media screen and (width >= 430px) {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@mixin typographySubtitles {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  @media screen and (width >= variables.$breakpoint-mobile) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@mixin typographyParagraphs {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  text-align: center;
+
+  @media screen and (width >= variables.$breakpoint-mobile) {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@mixin underlineGreenTitles {
+  border-bottom: 0.125rem solid variables.$underline-color;
+
+  @media screen and (width >= variables.$breakpoint-mobile) {
+    border-bottom-width: 0.25rem;
+  }
+}
+
+@mixin underlineGreenLinks {
+  padding-bottom: 0.3125rem;
+  border-bottom: 0.0625rem solid variables.$underline-color;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.1429rem;
+  text-transform: uppercase;
+
+  @media screen and (width >= variables.$breakpoint-mobile) {
+    padding-bottom: 0.625rem;
+    border-bottom-width: 0.125rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.175rem;
+  }
+}
+
+@mixin typographyInput {
+  border-bottom: variables.$border-bottom-line;
+  padding-left: 1.25rem;
+  padding-bottom: 0.3125rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+
+  @media screen and (width >= variables.$breakpoint-mobile) {
+    padding-left: 1.5rem;
+    padding-bottom: 0.625rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
 }

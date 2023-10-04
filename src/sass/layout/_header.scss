@@ -1,3 +1,23 @@
 @use "base/mixins" as mixins;
+@use "base/variables" as variables;
 
-@include mixins.titleSocialsMedia("header");
+.header {
+  @include mixins.flexCol(0);
+  width: 100%;
+  padding-top: 1rem;
+  .header__div {
+    .header__h1 {
+      font-size: 1.25rem;
+    }
+    @include mixins.titleSocialsMedia;
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile) {
+  .header {
+    padding-top: 1.25rem;
+    .header__h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -8,12 +8,12 @@
 
 mixin titleSocialsMedia(className)
   if (className === "header") 
-    h1(class=className + "__h1") 
+    h1.div__h1 
       a(href="/").h1__a branleedev   
   else 
-    p(class=className + "__p") 
-      a(href="/").h1__a branleedev   
-  ul(class=className + "__ul")
+    p.div__p
+      a(href="/").p__a branleedev   
+  ul.div__ul
     each icon in icons 
       li.ul__li
         a(href=icon.link, target="_blank" aria-label="Link to my " + icon.name + " profile").li__a
