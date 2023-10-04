@@ -1,4 +1,27 @@
 @use "base/variables" as variables;
+@use "base/mixins" as mixins;
+
+.section__h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.section__ul {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+}
+.section__ul::after {
+  @include mixins.imageEllipse;
+  bottom: -6.7rem;
+  left: 60%;
+}
 
 .li__article {
   display: flex;
@@ -24,5 +47,22 @@
     .article__p {
       font-size: 1rem;
     }
+  }
+
+  .section__ul {
+    gap: 1.625rem;
+  }
+  .section__ul::after {
+    bottom: -7rem;
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile-two) {
+  .section__ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section__ul::after {
+    bottom: -9rem;
   }
 }

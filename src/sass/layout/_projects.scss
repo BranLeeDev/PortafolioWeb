@@ -61,7 +61,29 @@
       }
     }
     .article__ul--view {
+      gap: 2rem;
       margin-top: 1.25rem;
     }
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile-two) {
+  .ul__article {
+    .article__h3 {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .article__ul--stack {
+    gap: 1rem;
+    margin-top: 0.75rem;
+    .li__p {
+      font-size: 1.25rem;
+    }
+  }
+
+  .article__ul--view {
+    gap: 2.25rem;
+    margin-top: 1.5rem;
   }
 }

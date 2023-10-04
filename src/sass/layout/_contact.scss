@@ -43,6 +43,7 @@
 @media screen and (width >= variables.$breakpoint-mobile) {
   .div__form {
     gap: 1.5rem;
+    margin-top: 3rem;
     padding-bottom: 5rem;
   }
   .div__form::after {
@@ -51,5 +52,24 @@
 
   .form__textarea {
     height: 10rem;
+  }
+
+  .div__p {
+    margin-top: 1.25rem;
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile-two) {
+  .div__form {
+    gap: 1.75rem;
+    margin-top: 3.5rem;
+    padding-bottom: 6rem;
+  }
+  .div__form::after {
+    bottom: 6.6rem;
+  }
+
+  .div__p {
+    margin-top: 1.5rem;
   }
 }

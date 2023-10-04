@@ -90,7 +90,7 @@
     line-height: 2.1rem;
   }
 
-  @media screen and (width >= 430px) {
+  @media screen and (width >= variables.$breakpoint-mobile-two) {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
@@ -116,6 +116,11 @@
   @media screen and (width >= variables.$breakpoint-mobile) {
     font-size: 1rem;
     line-height: 1.625rem;
+  }
+
+  @media screen and (width >= variables.$breakpoint-mobile-two) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -143,6 +148,12 @@
     line-height: 1.625rem;
     letter-spacing: 0.175rem;
   }
+
+  @media screen and (width >= variables.$breakpoint-mobile-two) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.225rem;
+  }
 }
 
 @mixin typographyInput {
@@ -159,5 +170,12 @@
     padding-bottom: 0.625rem;
     font-size: 1rem;
     line-height: 1.625rem;
+  }
+
+  @media screen and (width >= variables.$breakpoint-mobile-two) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding-left: 1.75rem;
+    padding-bottom: 0.9375rem;
   }
 }

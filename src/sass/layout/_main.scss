@@ -36,29 +36,7 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     border-bottom: variables.$border-bottom-line;
-    .section__h2 {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
-    }
-    .section__ul {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      @import "hard-skills";
-    }
-    .section__ul::after {
-      @include mixins.imageEllipse;
-      bottom: -6.7rem;
-      left: 60%;
-    }
+    @import "hard-skills";
   }
 
   .main__section--projects {
@@ -100,12 +78,6 @@
     .main__section--hard-skills {
       padding-top: 3rem;
       padding-bottom: 3rem;
-      .section__ul {
-        gap: 1.625rem;
-      }
-      .section__ul::after {
-        bottom: -7rem;
-      }
     }
 
     .main__section--projects {
@@ -116,6 +88,27 @@
 
     .main__section--contact {
       padding-top: 3.75rem;
+    }
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile-two) {
+  .main {
+    .main__section--introduction {
+      gap: 3.5rem;
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+    }
+
+    .main__section--hard-skills {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .main__section--projects {
+      gap: 3rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
     }
   }
 }

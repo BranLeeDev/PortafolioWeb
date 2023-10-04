@@ -26,3 +26,27 @@
     }
   }
 }
+
+@media screen and (width >= variables.$breakpoint-mobile-two) {
+  .footer {
+    padding-top: 2.75rem;
+    padding-bottom: 4rem;
+    .footer__div {
+      .div__h1 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile-three) {
+  .footer {
+    padding-top: 3rem;
+    padding-bottom: 4.25rem;
+    .footer__div {
+      .div__h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

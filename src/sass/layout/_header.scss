@@ -6,7 +6,7 @@
   width: 100%;
   padding-top: 1rem;
   .header__div {
-    .header__h1 {
+    .div__h1 {
       font-size: 1.25rem;
     }
     @include mixins.titleSocialsMedia;
@@ -16,8 +16,32 @@
 @media screen and (width >= variables.$breakpoint-mobile) {
   .header {
     padding-top: 1.25rem;
-    .header__h1 {
-      font-size: 1.5rem;
+    .header__div {
+      .div__h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile-two) {
+  .header {
+    padding-top: 1.5rem;
+    .header__div {
+      .div__h1 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (width >= variables.$breakpoint-mobile-three) {
+  .header {
+    padding-top: 1.75rem;
+    .header__div {
+      .div__h1 {
+        font-size: 2rem;
+      }
     }
   }
 }
