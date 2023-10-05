@@ -17,7 +17,7 @@ section.main__section.main__section--projects
       li.ul__li 
         article.ul__article  
           figure.article__figure 
-            img(src=project.image.url, alt="Image preview of the " + project.image.alt + " project" loading="lazy" width="1915px" height="928px").figure__img
+            img(src=project.image.url, alt="Image preview of the " + project.image.alt + " project" loading="lazy" width=1915 height=928).figure__img
           h3.article__h3=project.title
           ul.article__ul.article__ul--stack
             each tech in project.stack
