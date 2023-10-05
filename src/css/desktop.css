@@ -5,6 +5,13 @@
 .header .header__div {
   width: 100%;
 }
+.header .header__div .a__svg .svg__path {
+  -webkit-transition: fill 0.3s ease-out;
+  transition: fill 0.3s ease-out;
+}
+.header .header__div .a__svg:hover .svg__path {
+  fill: #4ee1a0;
+}
 
 .main .main__section--introduction::before {
   top: 2rem;
@@ -25,11 +32,25 @@
 .main .main__section--introduction .section__div .div__p {
   max-width: 31.25rem;
 }
+.main .main__section--introduction .section__div .div__a {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.main .main__section--introduction .section__div .div__a:hover {
+  color: #4ee1a0;
+}
 .main .main__section--hard-skills {
   max-width: 100rem;
 }
 .main .main__section--projects {
   max-width: 100rem;
+}
+.main .main__section--projects .section__div .div__a {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.main .main__section--projects .section__div .div__a:hover {
+  color: #4ee1a0;
 }
 .main .main__section--projects .section__ul {
   grid-template-columns: repeat(auto-fit, minmax(25.5rem, 1fr));
@@ -154,6 +175,13 @@
   padding-bottom: 0;
   max-width: 43.75rem;
 }
+.main .main__section--contact .section__div .div__form .form__input--submit {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.main .main__section--contact .section__div .div__form .form__input--submit:hover {
+  color: #4ee1a0;
+}
 .main .main__section--contact .section__div .div__form::after {
   bottom: 4rem;
 }
@@ -163,4 +191,11 @@
 }
 .footer .footer__div {
   max-width: 100rem;
+}
+.footer .footer__div .a__svg .svg__path {
+  -webkit-transition: fill 0.3s ease-out;
+  transition: fill 0.3s ease-out;
+}
+.footer .footer__div .a__svg:hover .svg__path {
+  fill: #4ee1a0;
 }

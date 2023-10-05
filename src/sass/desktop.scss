@@ -5,6 +5,14 @@
   max-width: 100rem;
   .header__div {
     width: 100%;
+    .a__svg {
+      .svg__path {
+        transition: fill 0.3s ease-out;
+      }
+    }
+    .a__svg:hover .svg__path {
+      fill: variables.$hover-color;
+    }
   }
 }
 
@@ -29,6 +37,12 @@
       .div__p {
         max-width: 31.25rem;
       }
+      .div__a {
+        transition: color 0.3s ease-in-out;
+      }
+      .div__a:hover {
+        color: variables.$hover-color;
+      }
     }
   }
 
@@ -38,6 +52,15 @@
 
   .main__section--projects {
     max-width: 100rem;
+    .section__div {
+      .div__a {
+        transition: color 0.3s ease-in-out;
+      }
+      .div__a:hover {
+        color: variables.$hover-color;
+      }
+    }
+
     .section__ul {
       grid-template-columns: repeat(auto-fit, minmax(25.5rem, 1fr));
       column-gap: 2.5rem;
@@ -111,6 +134,12 @@
         padding-top: 0;
         padding-bottom: 0;
         max-width: 43.75rem;
+        .form__input--submit {
+          transition: color 0.3s ease-in-out;
+        }
+        .form__input--submit:hover {
+          color: variables.$hover-color;
+        }
       }
       .div__form::after {
         bottom: 4rem;
@@ -123,5 +152,13 @@
   width: 100%;
   .footer__div {
     max-width: 100rem;
+    .a__svg {
+      .svg__path {
+        transition: fill 0.3s ease-out;
+      }
+    }
+    .a__svg:hover .svg__path {
+      fill: variables.$hover-color;
+    }
   }
 }

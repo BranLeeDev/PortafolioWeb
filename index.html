@@ -217,9 +217,9 @@
               Complete the form and I will send you a message to your email shortly.
             </p>
             <form class="div__form">
-              <input class="form__input form__input--name" type="text" name="name" id="name" autocomplete="given-name" placeholder="name" aria-label="Name">
-              <input class="form__input form__input--email" type="text" name="email" id="email" autocomplete="email" placeholder="email" aria-label="Email">
-              <textarea class="form__textarea" name="message" cols="30" rows="10" placeholder="message"></textarea>
+              <input class="form__input form__input--name" type="text" name="name" id="name" minlength="3" autocomplete="given-name" placeholder="name" aria-label="Name">
+              <input class="form__input form__input--email" type="email" name="email" id="email" minlength="10" autocomplete="email" placeholder="email" aria-label="Email">
+              <textarea class="form__textarea" name="message" cols="30" rows="10" minlength="20" placeholder="message"></textarea>
               <input class="form__input form__input--submit" type="submit" value="send message">
             </form>
           </div>
@@ -249,5 +249,6 @@
         </div>
       </footer>
     </div>
+    <script type="module" src="/src/js/scripts.js"> </script>
   </body>
 </html>
