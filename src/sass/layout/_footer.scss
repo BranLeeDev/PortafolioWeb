@@ -5,9 +5,10 @@
   @include mixins.flexCol(0);
   background-color: variables.$background-footer;
   width: 100%;
-  padding-top: 1.875rem;
-  padding-bottom: 3.75rem;
   .footer__div {
+    padding-top: 1.875rem;
+    padding-bottom: 3.75rem;
+    border-top: variables.$border-bottom-line;
     .div__p {
       font-size: 1.25rem;
     }
@@ -17,9 +18,9 @@
 
 @media screen and (width >= variables.$breakpoint-mobile) {
   .footer {
-    padding-top: 2.5rem;
-    padding-bottom: 3.75rem;
     .footer__div {
+      padding-top: 2.5rem;
+      padding-bottom: 3.75rem;
       .div__p {
         font-size: 1.5rem;
       }
@@ -29,9 +30,9 @@
 
 @media screen and (width >= variables.$breakpoint-mobile-two) {
   .footer {
-    padding-top: 2.75rem;
-    padding-bottom: 4rem;
     .footer__div {
+      padding-top: 2.75rem;
+      padding-bottom: 4rem;
       .div__h1 {
         font-size: 1.75rem;
       }
@@ -41,9 +42,9 @@
 
 @media screen and (width >= variables.$breakpoint-mobile-three) {
   .footer {
-    padding-top: 3rem;
-    padding-bottom: 4.25rem;
     .footer__div {
+      padding-top: 3rem;
+      padding-bottom: 4.25rem;
       .div__h1 {
         font-size: 2rem;
       }

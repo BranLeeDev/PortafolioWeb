@@ -580,7 +580,7 @@ input:focus {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-  gap: 2rem;
+  row-gap: 2rem;
 }
 .main .main__section--projects .section__ul .ul__li {
   display: -ms-grid;
@@ -659,6 +659,10 @@ input:focus {
     gap: 2rem;
     margin-top: 1.25rem;
   }
+  .main .main__section--projects .section__ul {
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    row-gap: 2.5rem;
+  }
 }
 @media screen and (width >= 450px) {
   .main .main__section--projects .ul__article .article__h3 {
@@ -674,6 +678,9 @@ input:focus {
   .main .main__section--projects .article__ul--view {
     gap: 2.25rem;
     margin-top: 1.5rem;
+  }
+  .main .main__section--projects .section__ul {
+    row-gap: 3rem;
   }
 }
 .main .main__section--contact {
@@ -705,7 +712,6 @@ input:focus {
           align-items: center;
   gap: 0;
   width: 91%;
-  border-bottom: 0.0625rem solid #ffffff;
 }
 .main .main__section--contact .section__div .div__h2 {
   font-size: 1.875rem;
@@ -924,6 +930,12 @@ input:focus {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
+  .main .main__section--contact {
+    padding-top: 4rem;
+  }
+  .main .main__section--contact .section__div {
+    max-width: 28.125rem;
+  }
 }
 .footer {
   display: -webkit-box;
@@ -939,10 +951,11 @@ input:focus {
   gap: 0;
   background-color: #242424;
   width: 100%;
-  padding-top: 1.875rem;
-  padding-bottom: 3.75rem;
 }
 .footer .footer__div {
+  padding-top: 1.875rem;
+  padding-bottom: 3.75rem;
+  border-top: 0.0625rem solid #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -994,7 +1007,7 @@ input:focus {
 }
 
 @media screen and (width >= 360px) {
-  .footer {
+  .footer .footer__div {
     padding-top: 2.5rem;
     padding-bottom: 3.75rem;
   }
@@ -1003,7 +1016,7 @@ input:focus {
   }
 }
 @media screen and (width >= 450px) {
-  .footer {
+  .footer .footer__div {
     padding-top: 2.75rem;
     padding-bottom: 4rem;
   }
@@ -1012,7 +1025,7 @@ input:focus {
   }
 }
 @media screen and (width >= 500px) {
-  .footer {
+  .footer .footer__div {
     padding-top: 3rem;
     padding-bottom: 4.25rem;
   }

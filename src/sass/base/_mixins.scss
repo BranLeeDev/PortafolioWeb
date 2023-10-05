@@ -37,23 +37,6 @@
   gap: $gap;
 }
 
-@mixin backgroundImage($top, $bottom, $left, $right, $width, $height, $url) {
-  content: "";
-  position: absolute;
-  top: $top;
-  bottom: $bottom;
-  left: $left;
-  right: $right;
-  z-index: -10;
-  display: block;
-  width: $width;
-  height: $height;
-  background-image: url($url);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 @mixin imageEllipse {
   content: "";
   position: absolute;

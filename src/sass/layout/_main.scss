@@ -54,7 +54,6 @@
     .section__div {
       @include mixins.flexCol(0);
       width: 91%;
-      border-bottom: variables.$border-bottom-line;
       @import "contact";
     }
   }
@@ -109,6 +108,13 @@
       gap: 3rem;
       padding-top: 6rem;
       padding-bottom: 6rem;
+    }
+
+    .main__section--contact {
+      padding-top: 4rem;
+      .section__div {
+        max-width: 28.125rem;
+      }
     }
   }
 }
