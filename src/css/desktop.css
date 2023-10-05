@@ -54,10 +54,10 @@
           box-shadow: 0rem 1rem 2rem 20rem rgba(0, 0, 0, 0.5);
 }
 .main .main__section--projects .ul__article .article__ul--view {
-  -webkit-transition: visibility 0.2s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  transition: visibility 0.2s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition: visibility 0.1s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: visibility 0.1s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.1s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.1s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   position: absolute;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
