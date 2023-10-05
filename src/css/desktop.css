@@ -175,6 +175,11 @@
   padding-bottom: 0;
   max-width: 43.75rem;
 }
+.main .main__section--contact .section__div .div__form .form__div .div__p::before {
+  top: -3.1rem;
+  width: 1.75rem;
+  height: 1.7rem;
+}
 .main .main__section--contact .section__div .div__form .form__input--submit {
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;

@@ -97,6 +97,13 @@
         gap: 2rem;
         padding-bottom: 7rem;
         margin-top: 4rem;
+        .form__div {
+          .div__p::before {
+            top: -2.6rem;
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
       }
       .div__form::after {
         bottom: 1.5rem;

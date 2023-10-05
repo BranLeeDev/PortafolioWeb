@@ -216,11 +216,23 @@
               I would love to hear about your project and how I can help you. 
               Complete the form and I will send you a message to your email shortly.
             </p>
-            <form class="div__form">
-              <input class="form__input form__input--name" type="text" name="name" id="name" minlength="3" autocomplete="given-name" placeholder="name" aria-label="Name">
-              <input class="form__input form__input--email" type="email" name="email" id="email" minlength="10" autocomplete="email" placeholder="email" aria-label="Email">
-              <textarea class="form__textarea" name="message" cols="30" rows="10" minlength="20" placeholder="message"></textarea>
+            <form class="div__form" action="https://formsubmit.co/8cd8a43fcbc38ea559f3de65aa6cc315 " method="POST">
+              <div class="form__div"> 
+                <input class="form__input form__input--name" type="text" name="name" id="name" minlength="3" autocomplete="given-name" placeholder="name" aria-label="Name">
+                <p class="div__p div__p--error"></p>
+              </div>
+              <div class="form__div">
+                <input class="form__input form__input--email" type="email" name="email" id="email" minlength="10" autocomplete="email" placeholder="email" aria-label="Email">
+                <p class="div__p div__p--error"></p>
+              </div>
+              <div class="form__div"> 
+                <textarea class="form__textarea" name="message" cols="30" rows="10" minlength="20" placeholder="message"></textarea>
+                <p class="div__p div__p--error"></p>
+              </div>
+              <input type="text" name="bot_trap" id="bot_trap">
               <input class="form__input form__input--submit" type="submit" value="send message">
+              <input class="form__input form__input--next" type="hidden" name="_next" value="https://www.brandonaguero.com/">
+              <input class="form__input form__input--captcha" type="hidden" name="_captcha" value="false">
             </form>
           </div>
         </section>

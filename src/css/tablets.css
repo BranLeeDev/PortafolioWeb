@@ -98,6 +98,11 @@
   padding-bottom: 7rem;
   margin-top: 4rem;
 }
+.main .main__section--contact .section__div .div__form .form__div .div__p::before {
+  top: -2.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .main .main__section--contact .section__div .div__form::after {
   bottom: 1.5rem;
   right: 80%;

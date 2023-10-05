@@ -1,6 +1,10 @@
 @use "base/mixins" as mixins;
 @use "base/variables" as variables;
 
+#bot_trap {
+  display: none;
+}
+
 .div__h2 {
   @include mixins.typographyTitles;
 }
@@ -18,14 +22,40 @@
   width: 100%;
   margin-top: 2.5rem;
   padding-bottom: 4.375rem;
-  .form__input--name,
-  .form__input--email {
-    @include mixins.typographyInput;
-  }
+  .form__div {
+    position: relative;
+    .form__input--name,
+    .form__input--email {
+      @include mixins.typographyInput;
+      width: 100%;
+    }
+    .div__p {
+      display: none;
+      position: absolute;
+      margin-top: 0;
+      right: 0;
+      color: #ff6f5b;
+    }
 
-  .form__textarea {
-    @include mixins.typographyInput;
-    height: 9rem;
+    .div__p::before {
+      content: "";
+      position: absolute;
+      top: -1.8rem;
+      right: 0;
+      display: inline-block;
+      width: 1.1rem;
+      height: 1.1rem;
+      background-image: url("https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/Portafolio/hjb3c3fa5xvdqxlrnelr");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .form__textarea {
+      @include mixins.typographyInput;
+      width: 100%;
+      height: 9rem;
+    }
   }
   .form__input--submit {
     align-self: flex-end;
@@ -44,13 +74,19 @@
     gap: 1.5rem;
     margin-top: 3rem;
     padding-bottom: 5rem;
+    .form__div {
+      .form__textarea {
+        height: 10rem;
+      }
+      .div__p::before {
+        top: -2.15rem;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
   }
   .div__form::after {
     bottom: 5.3rem;
-  }
-
-  .form__textarea {
-    height: 10rem;
   }
 
   .div__p {
