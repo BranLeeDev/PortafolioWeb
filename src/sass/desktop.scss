@@ -1,0 +1,127 @@
+@use "base/variables" as variables;
+
+.header {
+  width: 91%;
+  max-width: 100rem;
+  .header__div {
+    width: 100%;
+  }
+}
+
+.main {
+  .main__section--introduction::before {
+    top: 2rem;
+    right: 86%;
+  }
+
+  .main__section--introduction {
+    max-width: 100rem;
+    padding-top: 6.5rem;
+    padding-bottom: 7.5rem;
+    .section__div {
+      .div__div {
+        width: 115%;
+        .div__h2 {
+          display: block;
+          max-width: 44rem;
+        }
+      }
+      .div__p {
+        max-width: 31.25rem;
+      }
+    }
+  }
+
+  .main__section--hard-skills {
+    max-width: 100rem;
+  }
+
+  .main__section--projects {
+    max-width: 100rem;
+    .section__ul {
+      grid-template-columns: repeat(auto-fit, minmax(25.5rem, 1fr));
+      column-gap: 2.5rem;
+    }
+
+    .ul__article {
+      position: relative;
+      overflow: hidden;
+      .article__figure {
+        cursor: pointer;
+      }
+
+      .article__figure:hover ~ .article__ul--view,
+      .article__ul--view:hover {
+        transform: translateY(0);
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0rem 1rem 2rem 20rem rgba(0, 0, 0, 0.5);
+      }
+
+      .article__ul--view {
+        transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out,
+          box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        top: 20%;
+        left: 34%;
+        margin-top: 0;
+        transform: translateY(300%);
+        visibility: hidden;
+        .li__a {
+          transition: color 0.3s ease-in-out;
+        }
+        .li__a:hover {
+          color: variables.$hover-color;
+        }
+      }
+    }
+  }
+
+  .main__section--contact {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    .section__div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      align-items: flex-start;
+      width: 91%;
+      max-width: 100rem;
+      .div__h2 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      .div__p {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        max-width: 35rem;
+        margin-top: 0;
+        text-align: start;
+      }
+
+      .div__form {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        justify-self: flex-end;
+        gap: 3rem;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        max-width: 43.75rem;
+      }
+      .div__form::after {
+        bottom: 4rem;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  .footer__div {
+    max-width: 100rem;
+  }
+}

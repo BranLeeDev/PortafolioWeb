@@ -48,6 +48,9 @@
 .main .main__section--introduction .section__div .div__p {
   text-align: start;
 }
+.main .main__section--introduction .section__figure {
+  max-width: 43.75rem;
+}
 .main .main__section--introduction .section__figure::before {
   height: 39.6rem;
 }
@@ -113,4 +116,13 @@
 }
 .footer .footer__div .div__ul {
   max-width: 12.5rem;
+}
+
+@media screen and (width >= 1000px) {
+  .main .main__section--projects .section__ul {
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+  }
 }
