@@ -1,0 +1,116 @@
+.header .header__div {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header .header__div .div__ul {
+  max-width: 12.5rem;
+}
+
+.main .main__section--introduction::before {
+  top: 1rem;
+  right: 73%;
+}
+.main .main__section--introduction {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 5.625rem;
+}
+.main .main__section--introduction .section__div {
+  grid-column-start: 1/2;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 3.75rem;
+}
+.main .main__section--introduction .section__div .div__div {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.main .main__section--introduction .section__div .div__div .div__h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.7rem;
+  text-align: start;
+}
+.main .main__section--introduction .section__div .div__p {
+  text-align: start;
+}
+.main .main__section--introduction .section__figure::before {
+  height: 39.6rem;
+}
+.main .main__section--introduction .section__figure {
+  position: absolute;
+  top: 2.6rem;
+  right: -10%;
+  width: 50vw;
+  height: 30.375rem;
+}
+.main .main__section--introduction::after {
+  top: 25rem;
+  left: 100%;
+}
+.main .main__section--hard-skills {
+  border-bottom: none;
+}
+.main .main__section--hard-skills .section__ul {
+  width: 100%;
+}
+.main .main__section--hard-skills .section__ul::after {
+  bottom: -4rem;
+  left: 85%;
+}
+.main .main__section--hard-skills .li__article {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.875rem;
+}
+.main .main__section--hard-skills .li__article .article__h3 {
+  font-size: 3rem;
+}
+.main .main__section--projects .section__ul {
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  -webkit-column-gap: 1.25rem;
+     -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+}
+.main .main__section--contact .section__div .div__p {
+  margin-top: 2rem;
+}
+.main .main__section--contact .section__div .div__form {
+  gap: 2rem;
+  padding-bottom: 7rem;
+  margin-top: 4rem;
+}
+.main .main__section--contact .section__div .div__form::after {
+  bottom: 1.5rem;
+  right: 80%;
+}
+
+.footer .footer__div {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1.875rem;
+  padding-bottom: 2.5rem;
+}
+.footer .footer__div .div__ul {
+  max-width: 12.5rem;
+}

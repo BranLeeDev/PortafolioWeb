@@ -33,8 +33,7 @@
     font-weight: 700;
   }
   .article__p {
-    font-size: 0.875rem;
-    font-weight: 500;
+    @include mixins.typographyParagraphs;
   }
 }
 
@@ -43,9 +42,6 @@
     gap: 0.4rem;
     .article__h3 {
       font-size: 2rem;
-    }
-    .article__p {
-      font-size: 1rem;
     }
   }
 

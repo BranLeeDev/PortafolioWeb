@@ -68,14 +68,24 @@
   font-weight: 700;
   line-height: 1.875rem;
 
-  @media screen and (width >= variables.$breakpoint-mobile) {
+  @media screen and (width >= variables.$breakpoint-mobile) and (width < variables.$breakpoint-mobile-two) {
     font-size: 2.1rem;
     line-height: 2.1rem;
   }
 
-  @media screen and (width >= variables.$breakpoint-mobile-two) {
+  @media screen and (width >= variables.$breakpoint-mobile-two) and (width < variables.$breakpoint-tablets) {
     font-size: 2.5rem;
     line-height: 2.5rem;
+  }
+
+  @media screen and (width >= variables.$breakpoint-tablets) and (width < variables.$breakpoint-desktops) {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  @media screen and (width >= variables.$breakpoint-desktops) {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
   }
 }
 
@@ -96,14 +106,19 @@
   line-height: 1.5rem;
   text-align: center;
 
-  @media screen and (width >= variables.$breakpoint-mobile) {
+  @media screen and (width >= variables.$breakpoint-mobile) and (width < variables.$breakpoint-mobile-two) {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 
-  @media screen and (width >= variables.$breakpoint-mobile-two) {
+  @media screen and (width >= variables.$breakpoint-mobile-two) and (width < variables.$breakpoint-desktops) {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  @media screen and (width >= variables.$breakpoint-desktops) {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 }
 
@@ -148,17 +163,24 @@
   line-height: 1.5rem;
   text-transform: uppercase;
 
-  @media screen and (width >= variables.$breakpoint-mobile) {
+  @media screen and (width >= variables.$breakpoint-mobile) and (width < variables.$breakpoint-mobile-two) {
     padding-left: 1.5rem;
     padding-bottom: 0.625rem;
     font-size: 1rem;
     line-height: 1.625rem;
   }
 
-  @media screen and (width >= variables.$breakpoint-mobile-two) {
+  @media screen and (width >= variables.$breakpoint-mobile-two) and (width < variables.$breakpoint-desktops) {
     font-size: 1.125rem;
     line-height: 1.75rem;
     padding-left: 1.75rem;
     padding-bottom: 0.9375rem;
+  }
+
+  @media screen and (width >= variables.$breakpoint-desktops) {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    padding-left: 2rem;
+    padding-bottom: 1.25rem;
   }
 }

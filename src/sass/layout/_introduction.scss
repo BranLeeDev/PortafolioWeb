@@ -6,14 +6,12 @@
   .div__div {
     @include mixins.flexCol(0.125rem);
     .div__h2 {
-      display: inline;
       @include mixins.typographyTitles;
-    }
-    .div__p {
-      display: inline;
-      @include mixins.typographyTitles;
-      .p__span {
+      max-width: 18.375rem;
+      text-align: center;
+      .h2__span:last-of-type {
         @include mixins.underlineGreenTitles;
+        white-space: nowrap;
       }
     }
   }
@@ -48,6 +46,11 @@
 @media screen and (width >= variables.$breakpoint-mobile) {
   .section__div {
     gap: 1.5rem;
+    .div__div {
+      .div__h2 {
+        max-width: 21rem;
+      }
+    }
   }
 
   .section__figure {
@@ -63,5 +66,10 @@
 @media screen and (width >= variables.$breakpoint-mobile-two) {
   .section__div {
     gap: 1.75rem;
+    .div__div {
+      .div__h2 {
+        max-width: 25rem;
+      }
+    }
   }
 }
